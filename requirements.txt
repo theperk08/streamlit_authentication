@@ -1,0 +1,4 @@
+pandas
+streamlit
+streamlit-authenticator
+streamlit_option_menu
