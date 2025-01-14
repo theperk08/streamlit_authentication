@@ -4,7 +4,7 @@ from streamlit_authenticator import Authenticate
 from streamlit_option_menu import option_menu
 
 rep_images = "images/"
-rep_users = "users"
+rep_users = "users/"
 
 # import des donnée utilisateurs
 df_users = pd.read_csv(rep_users+'users.csv', sep=',')
