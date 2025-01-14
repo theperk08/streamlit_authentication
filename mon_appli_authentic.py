@@ -3,10 +3,11 @@ import streamlit as st
 from streamlit_authenticator import Authenticate
 from streamlit_option_menu import option_menu
 
-rep = "images/"
+rep_images = "images/"
+rep_users = "users"
 
 # import des donnée utilisateurs
-df_users = pd.read_csv('users.csv', sep=',')
+df_users = pd.read_csv(rep_users+'users.csv', sep=',')
 dico = df_users.to_dict(orient='records')
 
 # mise en forme des données utilisateur pour l'appli
@@ -44,19 +45,19 @@ def accueil(name):
     
     if selection == "🤗Accueil":
         st.write('Bienvenue')
-        st.image(rep+"home.jpg")
+        st.image(rep_images+"home.jpg")
     elif selection == "🐘Les photos d'éléphant":
         st.header("Voici des photos d'éléphants 🐘")
         col1, col2, col3 = st.columns(3)
 
         with col1:            
-            st.image(rep+"elephant-1.jpg")
+            st.image(rep_images+"elephant-1.jpg")
 
         with col2:
-            st.image(rep+"elephant-2.jpg")
+            st.image(rep_images+"elephant-2.jpg")
 
         with col3:
-            st.image(rep+"elephant-3.jpg")
+            st.image(rep_images+"elephant-3.jpg")
 
   
 
